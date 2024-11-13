@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "integer" },
+      "name": { "type": "string" },
+      "full_name": { "type": "string" },
+      "private": { "type": "boolean" },
+      "owner": {
+        "type": "object",
+        "properties": {
+          "login": { "type": "string" }
+        },
+        "required": ["login"]
+      },
+      "html_url": { "type": "string" },
+      "description": { "type": ["string", "null"] },
+      "fork": { "type": "boolean" },
+      "url": { "type": "string" }
+    },
+    "required": ["id", "name", "full_name", "private", "owner"]
+  }
+}
